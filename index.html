@@ -8,9 +8,12 @@ console.log("alle gestartet");
 	console.log("onload fertig");
 	console.log("mainArray: " + mainArray);
 	}
+antwortvorhanden=false;
 
 		function onclick0(){
 		var antwort=true;
+		if(antwortvorhanden!=true){
+		antwortvorhanden = true;
 			if(antwort==mainArray[0]){
 			console.log("spieler 1 beginnt");
 			document.getElementById("winner").innerHTML = "spieler 1 beginnt";
@@ -20,8 +23,14 @@ console.log("alle gestartet");
 					document.getElementById("winner").innerHTML = "spieler 2 beginnt";
 					}
 					}
+					else{
+						console.log("ergebnis schon vorhanden, da: " + antwortvorhanden);
+					}
+				}
 		function onclick1(){
 		var antwort=false;
+		if(antwortvorhanden!=true){
+		antwortvorhanden=true;
 		if (antwort==mainArray[0]){
 					console.log("spieler 1 beginnt");
 					document.getElementById("winner").innerHTML = "spieler 1 beginnt";
@@ -31,8 +40,15 @@ console.log("alle gestartet");
 							document.getElementById("winner").innerHTML = "spieler 2 beginnt";
 						}
 					}
+					else{
+						console.log("ergebnis schon vorhanden, da: " + antwortvorhanden);
+					}
+				}
+					
 		function onclick2(){
 				var antwort=true;
+				if(antwortvorhanden!=true){
+		antwortvorhanden=true;
 			if(antwort==mainArray[1]){
 			console.log("spieler 2 beginnt");
 			document.getElementById("winner").innerHTML = "spieler 2 beginnt";
@@ -42,8 +58,15 @@ console.log("alle gestartet");
 					document.getElementById("winner").innerHTML = "spieler 1 beginnt";
 					}
 					}
+					else{
+						console.log("ergebnis schon vorhanden, da: " + antwortvorhanden);
+					}
+				}
+				
 		function onclick3(){
 					var antwort=false;
+					if(antwortvorhanden!=true){
+		antwortvorhanden=true;
 			if(antwort==mainArray[1]){
 			console.log("spieler 2 beginnt");
 			document.getElementById("winner").innerHTML = "spieler 2 beginnt";
@@ -53,6 +76,10 @@ console.log("alle gestartet");
 					document.getElementById("winner").innerHTML = "spieler 1 beginnt";
 					}
 					}
+					else{
+						console.log("ergebnis schon vorhanden, da: " + antwortvorhanden);
+					}
+				}
 
 
 				
