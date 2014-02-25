@@ -10,7 +10,7 @@ var tiles = new Array(),
 
 function getRandomImageForTile() {
 
-	var iRandomImage = Math.floor((Math.random() * tileAllocation.length)),
+	var iRandomImage = Math.floor((Math.random() * tileAllocation.length)), //tileAllocation.length ist immer gleich 10, daher kann iRandomImage nie größer als 10 werden!! Math.round(Math.random() * (anzahlallerbilder - 1)) + 1 liefert nur bedingt brauchbare ergebnisse
 		iMaxImageUse = 2;
 	
 	while(tileAllocation[iRandomImage] >= iMaxImageUse ) {
@@ -22,8 +22,9 @@ function getRandomImageForTile() {
 			iRandomImage = 0;
 		}
 	}
-	
+	console.log(tileAllocation.length);
 	return iRandomImage;
+	
 }
 
 function createTile(iCounter) {
