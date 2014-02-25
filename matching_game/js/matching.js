@@ -169,13 +169,9 @@ function onPeekStart() {
 	setTimeout("hideTiles( function() { onPeekComplete(); })",iPeekTime);
 }
 
-$(document).ready(function() {
+function startgame() {
 	
-	$('#startGameButton').click(function() {
-	
-		initTiles();
-		
-		setTimeout("revealTiles(function() { onPeekStart(); })",iInterval);
+			initTiles();
+			setTimeout("revealTiles(function() { onPeekStart(); })",iInterval);
 
-	});
-});
+};

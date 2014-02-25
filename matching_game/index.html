@@ -1,8 +1,3 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -12,19 +7,37 @@ and open the template in the editor.
 	<script src="js/tile.js"></script>
 	<script src="js/jquery.flip.js"></script>
 	<script src="js/matching.js"></script>
+	<script type="text/javascript" src="../storage.js"></script>
+	<script type="text/javascript">
+							var obj = storage.getAll();
+							function printplayer(){
+							if (obj = 'starter: "spieler2"'){
+															document.getElementById("spieler").innerHTML = "Es spielt: Spieler2";
+															console.log("spieler 2 ist an der reihe");
+															}
+							if (obj = 'starter: "spieler1"'){
+															document.getElementById("spieler").innerHTML = "Es spielt: Spieler1";
+															console.log("spieler 1 ist an der reihe");
+															}
+							else{
+								console.log("fail");
+								}
+								}
+	</script>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body onload="startgame(); printplayer()">
 	<article id="game">
 		<header>
-			<div>Simple HTML5 Matching Game</div>
+			<div>
+			<b id="spieler"></b>
+			</div>
 		</header>
 		<section id="board">
 		</section>
-		<a href='#' id="startGameButton">New Game</a>
 	</article>
-	<audio id="audioEngine">
+	<audio id="audioEngine"><!-- geht nicht in allen browsern -->
 	  <source src="mp3/applause.mp3" type="audio/mpeg">
 	Your browser does not support the audio element.
 	</audio>

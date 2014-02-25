@@ -17,10 +17,14 @@ antwortvorhanden=false;
 			if(antwort==mainArray[0]){
 			console.log("spieler 1 beginnt");
 			document.getElementById("winner").innerHTML = "spieler 1 beginnt";
+			starter="spieler1";
+			storage.set("starter", starter);
 					}
 					else{
 					console.log("spieler 2 beginnt");
 					document.getElementById("winner").innerHTML = "spieler 2 beginnt";
+					starter="spieler2";
+			storage.set("starter", starter);
 					}
 					}
 					else{
@@ -34,10 +38,14 @@ antwortvorhanden=false;
 		if (antwort==mainArray[0]){
 					console.log("spieler 1 beginnt");
 					document.getElementById("winner").innerHTML = "spieler 1 beginnt";
+					starter="spieler1";
+			storage.set("starter", starter);
 					}
 						else{
 							console.log("spieler 2 beginnt");
 							document.getElementById("winner").innerHTML = "spieler 2 beginnt";
+							starter="spieler2";
+			storage.set("starter", starter);
 						}
 					}
 					else{
@@ -52,10 +60,14 @@ antwortvorhanden=false;
 			if(antwort==mainArray[1]){
 			console.log("spieler 2 beginnt");
 			document.getElementById("winner").innerHTML = "spieler 2 beginnt";
+			starter="spieler2";
+			storage.set("starter", starter);
 					}
 					else{
 					console.log("spieler 1 beginnt");
 					document.getElementById("winner").innerHTML = "spieler 1 beginnt";
+					starter="spieler1";
+			storage.set("starter", starter);
 					}
 					}
 					else{
@@ -70,10 +82,14 @@ antwortvorhanden=false;
 			if(antwort==mainArray[1]){
 			console.log("spieler 2 beginnt");
 			document.getElementById("winner").innerHTML = "spieler 2 beginnt";
+			starter="spieler2";
+			storage.set("starter", starter);
 					}
 					else{
 					console.log("spieler 1 beginnt");
 					document.getElementById("winner").innerHTML = "spieler 1 beginnt";
+					starter="spieler1";
+			storage.set("starter", starter);
 					}
 					}
 					else{
@@ -167,6 +183,7 @@ antwortvorhanden=false;
 	
 
 </script>
+<script type="text/javascript" src="storage.js"></script>
 
 </head>
 <body onload="alle()">
