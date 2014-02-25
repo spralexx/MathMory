@@ -156,6 +156,14 @@ antwortvorhanden=false;
 			return true;
 		}
 	}
+	function weitergehen(){
+	if (antwortvorhanden==true){
+								location.href='matching_game/index.html';
+								}
+								else{
+									console.log("noch keine entscheidung getroffen, da: " + antwortvorhanden)
+									}
+	}
 	
 
 </script>
@@ -174,6 +182,7 @@ antwortvorhanden=false;
 	<br><br>
 	<b id="winner"></b><br><br>
 	<input type="button" value="Reload Page" onClick="window.location.reload()">
+	<button onclick="weitergehen()">weiter</button>
 </div>
 
 </body>
