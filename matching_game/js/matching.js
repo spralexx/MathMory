@@ -7,6 +7,8 @@ var tiles = new Array(),
 	iTimer = 0,
 	iInterval = 100,
 	iPeekTime = 3000;
+	counter=0;
+	gamecounter=0;
 
 function getRandomImageForTile() {
 
@@ -22,7 +24,6 @@ function getRandomImageForTile() {
 			iRandomImage = 0;
 		}
 	}
-	console.log(tileAllocation.length);
 	return iRandomImage;
 	
 }
@@ -144,7 +145,39 @@ function checkMatch() {
 			playAudio("mp3/no.mp3");
 
 		} else {
-			playAudio("mp3/applause.mp3");
+			if(counter!=9){
+				counter=counter+1;
+				playAudio("mp3/applause.mp3");
+			}
+			else{
+				if(gamecounter!=1){
+					gamecounter=gamecounter+1
+				counter=0;
+				endtime = new Date().getTime();
+				timeof1=endtime-starttime
+				confirm("jetzt ist" + storage.getAll()["secondplayer"] + "an der reihe");
+				document.getElementById("spieler").innerHTML = "Es spielt: " + storage.getAll()["secondplayer"];
+				startgame();
+				}
+				else{
+					//wird ausgeführt, wenn der 2te spieler fertig ist.
+					endtime = new Date().getTime();
+					timeof2=endtime-starttime
+					if(timeof1<timeof2){
+						confirm(storage.getAll()["name"] + " war schneller");
+						document.getElementById("newgame").innerHTML = "REVANGE?";	
+					}
+					if(timeof2<timeof1){
+						confirm(storage.getAll()["secondplayer"] + " war schneller");
+						document.getElementById("newgame").innerHTML = "REVANGE?";	
+					}
+					else{
+						confim("Beide Spieler waren gleichschnell");
+						document.getElementById("newgame").innerHTML = "REVANGE?";	
+					}
+				
+				}		
+			}
 		}
 
 		iFlippedTile = null;
@@ -171,6 +204,7 @@ function onPeekStart() {
 }
 
 function startgame() {
+			starttime = new Date().getTime();
 	
 			initTiles();
 			setTimeout("revealTiles(function() { onPeekStart(); })",iInterval);
