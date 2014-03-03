@@ -11,7 +11,7 @@ var tiles = new Array(),
 	gamecounter=0;
 	tenRandomnumbers= new Array();
 	numbercount=0;
-	anzahlallerbilder=11;
+	anzahlallerbilder=11; //muss an die anzahl der bilder angepasst werden
 	reversecounter=9;
 	reihenfolge=new Array();
 	position=0;
@@ -165,8 +165,10 @@ function checkMatch() {
 		iFlippedTile = iTileBeingFlippedId;
 
 	} else {
+	bild1=tiles[iFlippedTile].getBackContentImage().replace(/[a]/g,"");
+	bild2=tiles[iTileBeingFlippedId].getBackContentImage().replace(/[a]/g,"");
 		
-		if( tiles[iFlippedTile].getBackContentImage() !== tiles[iTileBeingFlippedId].getBackContentImage()) {
+		if( bild1 !== bild2) {
 			
 			setTimeout("tiles[" + iFlippedTile + "].revertFlip()", 2000);
 			setTimeout("tiles[" + iTileBeingFlippedId + "].revertFlip()", 2000);
