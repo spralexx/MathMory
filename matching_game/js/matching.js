@@ -9,26 +9,55 @@ var tiles = new Array(),
 	iPeekTime = 3000;
 	counter=0;
 	gamecounter=0;
+	tenRandomnumbers= new Array();
+	numbercount=0;
+	anzahlallerbilder=11;
+	reversecounter=9;
+	reihenfolge=new Array();
+	position=0;
+
 
 function getRandomImageForTile() {
 
-	var iRandomImage = Math.floor((Math.random() * tileAllocation.length)), //tileAllocation.length ist immer gleich 10, daher kann iRandomImage nie größer als 10 werden!! Math.round(Math.random() * (anzahlallerbilder - 1)) + 1 liefert nur bedingt brauchbare ergebnisse
-		iMaxImageUse = 2;
-	
-	while(tileAllocation[iRandomImage] >= iMaxImageUse ) {
-			
-		iRandomImage = iRandomImage + 1;
-			
-		if(iRandomImage >= tileAllocation.length) {
-				
-			iRandomImage = 0;
-		}
+while(tenRandomnumbers.length != 10){														//get ten random numbers for tenRandomnumbers array
+	var iRandomImage = Math.floor((Math.random() * (anzahlallerbilder - 0)) + 0), 
+	iMaxImageUse = 2;
+	if(tenRandomnumbers.indexOf(iRandomImage) > -1 == false){
+		tenRandomnumbers[numbercount]=iRandomImage;
+		numbercount=numbercount+1;
 	}
-	return iRandomImage;
+	}
 	
+while(reihenfolge.length != 10){
+	var randomnumber = Math.round(Math.random() * (9 - 0)) + 0;
+	
+	if(reihenfolge.indexOf(randomnumber) > -1 == false){
+		reihenfolge[position]=randomnumber;
+		position=position+1;
+		console.log("position= " + position);
+	}
+	}
+		
+	if(reversecounter>=0){
+	var iRandomImage=tenRandomnumbers[reversecounter]+1;
+	reversecounter=reversecounter-1;
+	console.log("iRandomImage=" + iRandomImage);
+	return iRandomImage;
+	}
+	else{
+	order=reihenfolge[position-1];
+	var iRandomImage=tenRandomnumbers[order]+1 + "a";
+	position=position-1;
+	console.log("iRandomImage=" + iRandomImage);
+	return iRandomImage;
+	}
+	
+
 }
 
+ 
 function createTile(iCounter) {
+//console.log("createTile wird ausgeführt");
 	
 	var curTile =  new tile("tile" + iCounter),
 		iRandomImage = getRandomImageForTile();
@@ -38,7 +67,7 @@ function createTile(iCounter) {
 	curTile.setFrontColor("tileColor" + Math.floor((Math.random() * 5) + 1));
 	curTile.setStartAt(500 * Math.floor((Math.random() * 5) + 1));
 	curTile.setFlipMethod(flips[Math.floor((Math.random() * 3) + 1)]);
-	curTile.setBackContentImage("images/" +  (iRandomImage + 1) + ".jpg");
+	curTile.setBackContentImage("images/" +  iRandomImage + ".jpg");
 	
 	return curTile;
 }
@@ -204,6 +233,24 @@ function onPeekStart() {
 }
 
 function startgame() {
+var tiles = new Array(),
+	flips = new Array('tb', 'bt', 'lr', 'rl' ),
+	iFlippedTile = null,
+	iTileBeingFlippedId = null,
+	tileImages = new Array(1,2,3,4,5,6,7,8,9,10),
+	tileAllocation = null,
+	iTimer = 0,
+	iInterval = 100,
+	iPeekTime = 3000;
+	counter=0;
+	gamecounter=0;
+	tenRandomnumbers= new Array();
+	numbercount=0;
+	anzahlallerbilder=11;
+	reversecounter=9;
+	reihenfolge=new Array();
+	position=0;
+	
 			starttime = new Date().getTime();
 	
 			initTiles();
