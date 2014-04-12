@@ -1,24 +1,27 @@
 body {
-    /* Chrome 10+,Safari */
-background : -webkit-radial-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
-
-/* Firefox 4+ */ 
-background : -moz-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
-
-/* Opera */
-background : -o-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
-
-/* IE 10+ */
-background : -ms-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%); 
-
-/* W3C */
-background : -linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+	background-image: url(img/bg.gif);
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    box-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-box-pack: center;
+    box-pack: center;
 }
 
-input {
+/* button {
     width: 20em;
     height: 15em;
-}
+} */
 
 div {
     font-family: sans-serif;
@@ -26,4 +29,9 @@ div {
 
 h1 {
     color: #363636;
+}
+
+a {
+	color: #f5f5f5;
+	text-decoration: none;
 }
