@@ -2,6 +2,7 @@
 <head>
 <title>matching</title>
 
+<link rel="stylesheet" href="stylesheet.css"/>
 <script type="text/javascript" src="storage.js"></script>
 <script type="text/javascript">
 
@@ -210,19 +211,51 @@ antwortvorhanden=false;
 </head>
 <body onload="alle()">
 	
-<div width="150px" height="150px" align="center">
-	<b id="aufgabe0"></b><br>
-	<input name="antwort0tr" type="button" value="richtig" onclick="onclick0()">
-	<input type="button" name="antwort0fs" value="falsch" onclick="onclick1()">
-	<br><br><br>
-	<b id="aufgabe1"></b><br>
-	<input type="button" name="antwort1tr" onclick="onclick2()"value="richtig" >
-	<input type="button" name="antwort1fs" onclick="onclick3()"value="falsch">
+<div width="75%" height="75%" align="center">
+	<div id="flip">
+    <h2><b id="aufgabe0"></b></h2><br>
+	<button name="antwort0tr" onclick="onclick0()"><h3>Richtig!</h3></button>
+	<button name="antwort0fs" onclick="onclick1()"><h3>Falsch!</h3></button>
+	</div>
+        <br><br>
+    
+    <button onClick="window.location.reload()"><h4>Neue Aufgaben</h4></button>
+	<button onclick="weitergehen()"><h4>Weiter</h4></button> <br> <br> <br>
+    
+    <h2>
+	<b id="aufgabe1"></b></h2><br>
+	<button name="antwort1tr" onclick="onclick2()"><h3>Richtig!</h3></button>
+	<button name="antwort1fs" onclick="onclick3()"><h3>Falsch!</h3></button>
 	<br><br>
 	<b id="winner"></b><br><br>
-	<input type="button" value="Reload Page" onClick="window.location.reload()">
-	<button onclick="weitergehen()">weiter</button> 
+	
 </div>
 
 </body>
 </html>
+
+<!-- 
+<body onload="alle()">
+	
+<div width="75%" height="75%" align="center">
+	<div id="flip">
+    <b id="aufgabe0"></b><br>
+	<input name="antwort0tr" type="button" value="Richtig!" onclick="onclick0()">
+	<input type="button" name="antwort0fs" value="Falsch!" onclick="onclick1()">
+	</div>
+        <br><br>
+    
+    <input type="button" value="Neue Aufgaben" onClick="window.location.reload()">
+	<button onclick="weitergehen()">Weiter</button> <br> <br> <br>
+    
+    
+	<b id="aufgabe1"></b><br>
+	<input type="button" name="antwort1tr" onclick="onclick2()"value="Richtig!" >
+	<input type="button" name="antwort1fs" onclick="onclick3()"value="Falsch!">
+	<br><br>
+	<b id="winner"></b><br><br>
+	
+</div>
+
+</body>
+-->

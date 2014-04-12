@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "org.mediengeil.app"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>MathMory</name>
+
+    <description>
+        MathMory
+    </description>
+
+    <author href="https://app.mediengeil.org" email="app@mediengeil.org">
+        Thorben Dittmar 
+    </author>
+	
+	<preference name="permissions"                value="none"/>
+	
+	<preference name="orientation"                value="default" />
+	<preference name="fullscreen"                 value="true" />
+	
+	<icon src="icon.png" />
+	
+	<gap:splash src="splash.jpg" />
+	
+	<preference name="splash-screen-duration" value="5000"/>
+
+</widget>

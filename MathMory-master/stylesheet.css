@@ -1,0 +1,48 @@
+body {
+    /* Chrome 10+,Safari */
+background : -webkit-radial-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+
+/* Firefox 4+ */ 
+background : -moz-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+
+/* Opera */
+background : -o-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+
+/* IE 10+ */
+background : -ms-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%); 
+
+/* W3C */
+background : -linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+}
+
+#flip {
+-moz-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+
+transform: rotate(180deg);       
+}
+
+div {
+    font-family: sans-serif;
+}
+h1 {
+    color: #363636;
+}
+
+h2 {
+    color: #363636;
+}
+
+h3 {
+    color: #363636;
+}
+
+h4 {
+    color: #363636;
+}
+
+h5 {
+    color: #363636;
+}

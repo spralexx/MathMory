@@ -147,7 +147,7 @@ $.fn.flip = function(settings){
 			bgColor: acceptHexColor(settings.color) || "#999",
 			color: acceptHexColor(settings.bgColor) || $this.css("background-color"),
 			content: $this.html(),
-			speed: settings.speed || 500,
+			speed: settings.speed || 100,
             onBefore: settings.onBefore || function(){},
             onEnd: settings.onEnd || function(){},
             onAnimation: settings.onAnimation || function(){}
@@ -165,7 +165,7 @@ $.fn.flip = function(settings){
             fontSize: $this.css("font-size") || "12px",
             direction: settings.direction || "tb",
             toColor: acceptHexColor(settings.color) || "#999",
-            speed: settings.speed || 500,
+            speed: settings.speed || 100,
             top: $this.offset().top,
             left: $this.offset().left,
             target: settings.content || null,

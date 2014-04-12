@@ -11,8 +11,21 @@ root {
 }
 
 body {
-	background-color: #fff;
 	margin: 20px 0px 0px 0px;
+    /* Chrome 10+,Safari */
+background : -webkit-radial-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+
+/* Firefox 4+ */ 
+background : -moz-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+
+/* Opera */
+background : -o-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
+
+/* IE 10+ */
+background : -ms-linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%); 
+
+/* W3C */
+background : -linear-gradient(center center,circle farthest-corner, rgb(255, 255, 255) 13%, rgb(215, 215, 215) 86%);
 }
 
 body article#game {
@@ -36,10 +49,10 @@ header div {
 
 header div {
 	text-align: center;
-	font-family: 'Cherry Swash', cursive;
+	font-family: sans-serif;
 	font-weight: 400;
 	font-size: 30px;
-	color: rgb(20, 166, 0);
+	color: #363636;
 }
 
 #startGameButton
