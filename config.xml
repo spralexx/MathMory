@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "org.mediengeil.app"
+        id          = "org.mediengeil.app.mathmory"
         versionCode = "10" 
         version     = "1.0.0" >
 
@@ -13,7 +13,7 @@
         MathMory
     </description>
 
-    <author href="https://app.mediengeil.org" email="app@mediengeil.org">
+    <author href="https://apps.mediengeil.org" email="app@mediengeil.org">
         Thorben Dittmar 
     </author>
 	
