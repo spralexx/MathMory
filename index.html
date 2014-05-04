@@ -3,20 +3,31 @@
 <title>
 Mathmory
 </title>
+    <link rel="stylesheet" href="stylesheet.css"/>
 <script type="text/javascript" src="MathMory-master/storage.js"></script>
 <script type="text/javascript">
+
+// Timeout während Splashscreen
+setTimeout(abfrage, 3000);
+	
+function abfrage() {
 var name0=prompt("Spieler1 gib deinen Namen ein!");
 var name1=prompt("Spieler2 gib deinen Namen ein!");
 
 storage.set("namespieler1", name0);
 storage.set("namespieler2", name1);
-
+}
 
 </script>
 </head>
 <body>
-
-<input type=button onClick="location.href='MathMory-master/index.html'" value="weiter"> 
-
+<div><center><button onClick="location.href='MathMory-master/index.html'"><h1>Spiel starten!</h1></button></center>
+</div>
+<br/>
+<div>
+	<h4>
+		<a href="http://MathMory.Apps.mediengeil.org/"><p>Spielanleitung  |  Credits</p></a>
+	</h4>
+</div>
 </body>
 </html>
