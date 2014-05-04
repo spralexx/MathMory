@@ -186,7 +186,7 @@ function checkMatch() {
 				counter=0;
 				endtime = new Date().getTime();
 				timeof1=endtime-starttime
-				confirm("jetzt ist" + storage.getAll()["secondplayer"] + "an der reihe");
+				confirm("Jetzt ist " + storage.getAll()["secondplayer"] + " an der Reihe");
 				document.getElementById("spieler").innerHTML = "Es spielt: " + storage.getAll()["secondplayer"];
 				startgame();
 				}
@@ -195,11 +195,11 @@ function checkMatch() {
 					endtime = new Date().getTime();
 					timeof2=endtime-starttime
 					if(timeof1<timeof2){
-						confirm(storage.getAll()["name"] + " war schneller");
+						confirm(storage.getAll()["name"] + " war schneller.");
 						document.getElementById("newgame").innerHTML = "REVANGE?";	
 					}
 					if(timeof2<timeof1){
-						confirm(storage.getAll()["secondplayer"] + " war schneller");
+						confirm(storage.getAll()["secondplayer"] + " war schneller.");
 						document.getElementById("newgame").innerHTML = "REVANGE?";	
 					}
 					else{
